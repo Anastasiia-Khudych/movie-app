@@ -1,0 +1,9 @@
+@use '../../styles/colors.scss' as *;
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: $yellow;
+  color: $black;
+}

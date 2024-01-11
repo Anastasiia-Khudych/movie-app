@@ -1,0 +1,52 @@
+@use '../../../../../styles/colors.scss' as *;
+
+.filtersContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 18px;
+
+  .inputContainer {
+    position: relative;
+    display: inline-block;
+
+    .searchInput {
+      width: 300px;
+      padding: 10px 24px 10px 8px;
+      border: 1px solid #E5E4E2;
+      border-radius: 8px;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 157%;
+      color: $black;
+      outline: none;
+
+      transition-property: box-shadow, border-color;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-out;
+
+      &::placeholder {
+        color: #818589;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 6px #E5E4E2;
+        border-color: #808080;
+      }
+    }
+
+    .clearBtn {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      color: #818589;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@use '../../../../styles/colors.scss' as *;
+
+.details {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: 740px) {
+    & {
+      flex-direction: column;
+    }
+  }
+
+  .backBtn {
+    flex-shrink: 0;
+    display: block;
+    width: 100px;
+    padding: 8px;
+    margin: 20px 16px 0px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    color: $black;
+    background-color: $yellow;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: #e9c307;
+    }
+  }
+
+  .loaderContainer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movieDetailsContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .card {
+      display: flex;
+      margin: 20px 0px;
+      padding: 20px 40px;
+      width: 90%;
+      height: fit-content;
+      box-shadow: 0px 10px 15px -3px #0000001a;
+
+      @media (max-width: 740px) {
+        & {
+          padding: 10px;
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+
+      .posterContainer {
+        flex-shrink: 0;
+        width: 300px;
+        height: 445px;
+        margin-right: 16px;
+
+        .poster {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .movieInfo {
+        .name {
+          font-size: 24px;
+          color: $dark-green;
+          margin-bottom: 8px;
+        }
+
+        .infoTable {
+          display: grid;
+          grid-template-columns: 100px 1fr;
+          row-gap: 8px;
+          font-size: 16px;
+
+          .itemName {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .errorContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    .errorText {
+      padding: 40px 40px;
+      text-align: center;
+    }
+
+    .errorImage {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

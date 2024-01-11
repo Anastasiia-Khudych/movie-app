@@ -1,0 +1,51 @@
+@use '../../../../styles/colors.scss' as *;
+
+.pagination {
+  list-style: none;
+  height: 31px;
+  width: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: $yellow;
+  border-radius: 50%;
+}
+
+.pageItem {
+  list-style: none;
+  user-select: none;
+  padding: 3px 12px;
+  height: 31px;
+  width: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+  border-radius: 50%;
+  transition: background-color 0.1s ease-in;
+
+  &:not(.active):hover {
+    background-color: rgba($black, 0.1);
+  }
+}
+
+.nextPrevBtn {
+  user-select: none;
+  padding-top: 5px;
+  padding-left: 10px;
+  height: 31px;
+  width: 31px;
+  border-radius: 50%;
+  margin: 0px 4px;
+  background-color: $black;
+  color: $yellow;
+}
+
+.disabled {
+  background-color: rgba($black, 0.5);
+}

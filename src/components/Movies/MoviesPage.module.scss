@@ -1,0 +1,12 @@
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    flex: 1;
+  }
+}

@@ -16,4 +16,5 @@ A movie search application built with React and other modern technologies to hel
 
 - **Search**: Allows users to search for movies by title.
 - **Movie Details**: Clicking on a movie displays detailed information about it.
+
 [Demo](https://search-movie-app3000.netlify.app/)
